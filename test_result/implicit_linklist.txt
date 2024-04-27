@@ -1,0 +1,39 @@
+finishing test: amptjp-bal.rep
+heap used : 2028880 bytes
+time : 69889537
+finishing test: binary2-bal.rep
+heap used : 1122320 bytes
+time : 336195183
+finishing test: binary-bal.rep
+heap used : 2097168 bytes
+time : 151619727
+finishing test: cccp-bal.rep
+heap used : 1687960 bytes
+time : 72729480
+finishing test: coalescing-bal.rep
+heap used : 12320 bytes
+time : 53533
+finishing test: cp-decl-bal.rep
+heap used : 3188640 bytes
+time : 82998670
+finishing test: expr-bal.rep
+heap used : 3436368 bytes
+time : 64078741
+finishing test: random2-bal.rep
+heap used : 15766824 bytes
+time : 60655826
+finishing test: random-bal.rep
+heap used : 16127576 bytes
+time : 60273755
+finishing test: realloc2-bal.rep
+heap used : 83056 bytes
+time : 174862700
+finishing test: realloc-bal.rep
+heap used : 2315296 bytes
+time : 264205568
+finishing test: short1-bal.rep
+heap used : 12304 bytes
+time : 70139
+finishing test: short2-bal.rep
+heap used : 20496 bytes
+time : 67930
