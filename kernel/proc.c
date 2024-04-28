@@ -174,6 +174,7 @@ freeproc(struct proc *p)
   for (int i = 0; i < NSHAREDPAGES; ++i) {
     if (p->shPages[i]) {
       if (--p->shPages[i]->ref_count == 0) {
+//        printf("free shared page: creator %d, key %d, pa %p\n", p->shPages[i]->creator, p->shPages[i]->key, p->shPages[i]->pa);
         p->shPages[i]->status = UNUSED_PG;
         p->shPages[i]->key = 0;
         kfree((void *)p->shPages[i]->pa);
@@ -738,7 +739,7 @@ int mkshpg(uint64 key) {
         sh_pages[i].ref_count = 0;
         sh_pages[i].size = PGSIZE;
         sh_pages[i].creator = myproc()->pid;
-        printf("create shared page: creator %d, key %d, pa %p\n", sh_pages[i].creator, sh_pages[i].key, sh_pages[i].pa);
+//        printf("create shared page: creator %d, key %d, pa %p\n", sh_pages[i].creator, sh_pages[i].key, sh_pages[i].pa);
         release(&shpg_lock);
         return 0;
       }
@@ -790,7 +791,7 @@ uint64 bdshpg(uint64 key) {
         release(&shpg_lock);
         return 0;
       } else {
-        printf("map shared page: creator %d, key %d, pa %p, va %p\n", sh_pages[i].creator, sh_pages[i].key, sh_pages[i].pa, va);
+//        printf("map shared page: creator %d, key %d, pa %p, va %p\n", sh_pages[i].creator, sh_pages[i].key, sh_pages[i].pa, va);
       }
 
       p->sz += PGSIZE;
